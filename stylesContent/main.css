@@ -1,0 +1,245 @@
+/* General font style */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  /* font-style: normal; */
+  /* font-weight: 400; */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General page tab style. */
+#genTabStyle {
+  background: rgb(21, 137, 46);
+  /* height: 120px; */
+  width: 100%;
+}
+#genTabStyleSub {
+  /* height: auto; */
+  max-width: 1370px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+#homeTop {
+  margin: 8px;
+}
+#genTabGroup {
+  padding: 0;
+  /* overflow: hidden; */
+  /* display: inline-block; */
+}
+.genTabh3 {
+  float: left;
+  color: white;
+}
+.genTabh3 .genTab {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.genTabh3 .genTab:hover {
+  color: white;
+  border-radius: 2px;
+  transition: 0.25s;
+}
+#genTabLogin {
+  float: right;
+}
+
+/* General content style */
+#genContentStyle {
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/* General page footer style. */
+#genFooter {
+  width: 100%;
+  background-color: rgb(21, 137, 46);
+}
+#genFooterAccent {
+  background: rgb(21, 137, 46);
+  height: 52px;
+  max-width: 1370px;
+  margin: auto;
+  overflow: hidden;
+}
+#genFooterBackTop {
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background: rgb(47, 46, 46);
+  color: white;
+  /* border-radius: 2px; */
+  float: right;
+  /* overflow: hidden; */
+  text-decoration: none;
+}
+#genFooterBackTop:hover {
+  background-color: rgb(21, 137, 46);
+  color: black;
+  /* border-radius: 2px; */
+  transition: 0.25s;
+}
+#genFooterTable {
+  background: rgb(47, 46, 46);
+  color: white;
+  max-width: 1370px;
+  margin: auto;
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.genFootertd {
+  float: left;
+  text-indent: 2em;
+  width: 325px;
+}
+.genFootertd #genFootertd2nd {
+  list-style: none;
+}
+.genFooterHead {
+  text-indent: 0;
+  margin: 8px 0;
+}
+#genFooterPP {
+  background: rgb(37, 36, 36);
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.genFooterGenLink {
+  color: white;
+  text-decoration: none;
+}
+.genFooterGenLink:hover {
+  color: rgb(21, 137, 46);
+  transition: 0.25s;
+}
+
+/* General Footer Customer Support */
+.genFooterHelp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgb(21, 137, 46);
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px rgb(37, 36, 36);
+}
+.label-container {
+  position: fixed;
+  bottom: 48px;
+  right: 105px;
+  display: table;
+  visibility: hidden;
+}
+.label-text {
+  color: #fff;
+  background: rgba(37, 36, 36, 0.5);
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  border-radius: 3px;
+}
+.label-arrow {
+  display: table-cell;
+  vertical-align: middle;
+  color: rgb(37, 36, 36);
+  opacity: 0.5;
+}
+a.genFooterHelp + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.25s ease;
+}
+a.genFooterHelp:hover + div.label-container {
+  visibility: visible;
+  opacity: 1;
+}
+a.genFooterHelp:hover {
+  background: rgb(47, 46, 46);
+  background-image: url(../photos/81802832_2556869651193212_82644477067227.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Notes */
+
+/* Notes
+Last Rule, Specificity, Universal Selector
+Pixels, Font-Size, Width, Height
+Percent Values
+Em-Rem Values
+    Note: rem is relative to root; em is relative to parent. Both are relative units and are equal to default browser style 16px.
+VH And VW
+Default Browser Syles
+Calc Function
+<style>border: 20px solid black;</style>
+Background-Image-Property
+Background-Repeat
+Background-Size
+Background-Position
+Background-Attachment
+Linear-Gradient
+    <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#) center/cover fixed no-repeat;">
+        This is DIV
+    </div>
+Float Property (and Clear)
+Position Property
+Media Quries
+    @media screen and ()
+Z-Index
+::Before and ::After Pseudo Elements (Note: Does not work with with img)
+Descendant and Child Selectors/Combinators
+    <head>
+        <style>
+            body div {}
+            body > div {}
+        <style>
+    </head>
+    <body>
+        <section>
+            <div>
+                <span></span>
+            </div>
+        </section>
+        <div>
+            <p></p>
+        </div>
+    <body>
+Pseudo-element
+    ::before, ::after, ::first-line, ::first-letter
+Pseudo-class
+    :hover, :link, :visited, :active
+Root pseudo-class
+    Note: Styles the root element of the document. Used mostly for general styles and can be used with CSS variables.
+    <style>
+        :root {
+            font-size: 150%;
+        }
+        div {
+            font-size: 16px;
+        }
+        span {
+            font-size: 1rem;
+        }
+    </style>
+Transform
+    Note: Applies a 2D or 3D transformation to an element.
+    translate (), rotate (), scale (), skew ()
+Transition
+    Note: Change over time.
+Animation
+    Note: Change over time with points.
+*/

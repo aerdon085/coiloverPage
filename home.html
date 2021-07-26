@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesContent/main.css">
+    <style>
+        /* #contentBG {
+            background-image: url(./photos/contentBG.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        } */
+        #contentBG::after {
+            content: "";
+            background-image: url(./photos/contentBG.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* homeC1 */
+        #homeC1 {
+            max-width: 1370px;
+            margin: auto;
+        }
+        #homeC1Container {
+            margin: 160px 0;
+        }
+        #homeC1 h1 {
+            font-size: 48px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        #homeC1 h4 {
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* homeC2 */
+        #homeC2 {
+            background: rgb(21, 137, 46);
+            padding-bottom: 8px;
+        }
+        .homeContentHelpContainer {
+            margin: auto;
+            max-width: 1370px;
+            overflow: visible;
+            text-align: center;
+        }
+        #homeContentHelp {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #homeContentHelp h4 {
+            /* float: left; */
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            height: 36px;
+            width: 141px;
+            /* margin: 0 100px; */
+            cursor: pointer;
+        }
+        #homeContentHelp h4:hover {
+            color: black;
+            transition: 0.25s;
+        }
+        .homeC2TT {
+            display: inline-block;
+            position: relative;
+            /* overflow: visible; */
+        }
+        .homeC2TT #homeC2TTT1,
+        .homeC2TT #homeC2TTT2,
+        .homeC2TT #homeC2TTT3, 
+        .homeC2TT #homeC2TTT4 {
+            list-style: none;
+            visibility: hidden;
+            width: 320px;
+            background: rgb(47, 46, 46);
+            color: white;
+            text-align: center;
+            padding: 8px 8px;
+            border-radius: 6px;
+            /* Position the tooltip */
+            left: 50%;
+            bottom: 120%;
+            margin-left: -160px;
+            /* Use half of the width (240/2 = 120), to center the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        .homeC2TT:hover #homeC2TTT1,
+        .homeC2TT:hover #homeC2TTT2,
+        .homeC2TT:hover #homeC2TTT3, 
+        .homeC2TT:hover #homeC2TTT4 {
+            visibility: visible;
+            /* transition: 0.25s; */
+        }
+        #homeContentHelpOtherContainer {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .homeContentHelpOther {
+            float: left;
+            height: auto;
+            width: 270px;
+            /* margin: 0 200px; */
+        }
+        .homeContentHelpOther ul {
+            list-style: none;
+        }
+        
+        /* homeC3 */
+        #homeC3 {
+            background: white;
+            padding: 64px 0;
+        }
+        #homeC3Container {
+            max-width: 1370px;
+            display: flex;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+        #homeC3CC1,
+        #homeC3CC2 {
+            height: 180px;
+            width: 320px;
+            text-align: center;
+        }
+        #homeC3CC1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        #homeC3CC1 h2 {
+            margin-top: 32px;
+        }
+        #homeC3CC1 h4 {
+            margin-bottom: 32px;
+        }
+        #homeC3CC2 a {
+            height: 40px;
+            margin-bottom: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            background-color: rgb(21, 137, 46);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #homeC3CC2 a:hover {
+            color: white;
+            background-color: rgb(206, 32, 38);
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        #homeC3CC2 img {
+            height: calc(180px - 48px);
+            width: inherit;
+            margin-top: 4px;
+            object-fit: cover;
+            border: 4px solid black;
+        }
+
+        /* homeC4 */
+        #homeC4 {
+            height: 800px;
+            max-width: 1370px;
+            padding: 64px 0;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #homeC4 h2 {
+            text-align: center;
+        }
+        #homeC4 img {
+            height: 450px;
+            width: 800px;
+            object-fit: cover;
+        }
+
+        /* homeC5 */
+        #homeC5 {
+            background: rgb(238, 240, 228);
+        }
+        #homeC5 div {
+            height: 600px;
+            max-width: 1370px;
+            padding: 64px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #homeC5 div h2 {
+            text-align: center;
+        }
+        #homeC5 div img {
+            height: 300px;
+            width: 1000px;
+            object-fit: cover;
+            outline: black solid 4px;
+        }
+    </style>
+    <title>Coilover Specialist - HOME</title>
+</head>
+
+<body>
+    <div id="contentBG">
+        <!-- General page tab style. -->
+        <section id="genTabStyle">
+            <div id="genTabStyleSub">
+                <!-- Main page tabs are to be h3. Layout is horizontal, with the website photo on their left. -->
+                <img src="./photos/81802832_2556869651193212_82644477067227.webp" alt="Logo image of Coilover Specialist." id="homeTop">
+                <div id="genTabGroup">
+                    <h3 class="genTabh3">
+                        <a href="./home.html" class="genTab">HOME</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="./services.html" class="genTab">SERVICES</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="#" class="genTab">FAQs</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="https://www.facebook.com/Coiloverhaul/" target="_blank" class="genTab">FB PAGE</a>
+                    </h3>
+                </div>
+                <div id="genTabLogin">
+                    <p>LOG IN</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content -->
+        <section id="genContentStyle">
+            <div id="homeC1">
+                <!-- homeC1. The line below before break is main banner. h4 for subtitle. -->
+                <div id="homeC1Container">
+                    <h1>COILOVER SPECIALIST</h1>
+                    <h4>For all your after-market coilover repair and restoration needs.</h4>
+                </div>
+            </div>
+            <div id="homeC2">
+                <!-- homeC2. subFooter. Below aren't page nav. tabs thus h4. These are FMIs (for more information). Also horizontal in layout. When clicked, a mini-window appears for the FMIs. -->
+                <div class="homeContentHelpContainer">
+                    <div id="homeContentHelp">
+                        <h4 class="homeC2TT">REPAIRS
+                            <ul id="homeC2TTT1">
+                                <li>Repairs stuck perch, lower mount and damping click.</li>
+                                <li>Loosen stuck rusted perch and stuck damping click assembly.</li>
+                            </ul>
+                        </h4>
+                        <h4 class="homeC2TT">OVERHAULING
+                            <ul id="homeC2TTT2">
+                                <li>Cleaning of all internal parts (piston, piston rod, shims, and inner tube).</li>
+                                <li>Replacement of main seal, o-rings, fork oil, and nitrogen gas.</li>
+                            </ul>
+                        </h4>
+                        <h4 class="homeC2TT">CUSTOMIZATION
+                            <ul id="homeC2TTT3">
+                                <li>Conversion of disposable damper into a rebuildable design.</li>
+                            </ul>
+                        </h4>
+                        <h4 class="homeC2TT">CONVERSIONS
+                            <ul id="homeC2TTT4">
+                                <li>Replacement of piston rod, shorten piston rod travel, or replacement of piston rod with damping adjustment.</li>
+                                <li>Revalving of shim stockings.</li>
+                                <li>Conversion of other coilovers to fit another brand of coilover on other vehicle.</li>
+                            </ul>
+                        </h4>
+                    </div>
+                </div>
+                <div class="homeContentHelpContainer">
+                    <!-- Following lines before break is aetsthetically below FMIs. Horizontal layout by list (not by item). -->
+                    <div id="homeContentHelpOtherContainer">
+                        <div class="homeContentHelpOther">
+                            <p>Other services:
+                            <ul>
+                                <li><strong>CLEANING/DEGREASING/DETAILING</strong></li>
+                                <li><strong>DISASSEMBLY OF STRUT</strong></li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div class="homeContentHelpOther">
+                            <p>Special services by schedule only:
+                            <ul>
+                                <li><strong>INSTALLATION OF COILOVERS</strong></li>
+                                <li><strong>TUNING</strong></li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="homeC3">
+                <!-- Below are sub-banners, h2. h4 still for subtitles. Layout is horizontal (only for this one) with sub-banner title and subtitle on the left-hand side; and SEND YOUR COILOVERS button, which is aethestically above the photo, on the right-hand side. -->
+                <div id="homeC3Container">
+                    <div id="homeC3CC1">
+                        <h2>COME AND VISIT US</h2>
+                        <h4>for repair and overhauling service estimates.</h4>
+                    </div>
+                    <div id="homeC3CC2">
+                        <a href="#">SEND YOUR COILOVERS</a>
+                        <img src="./photos/contentBG.jpg" alt="Image of a car.">
+                    </div>
+                </div>
+            </div>
+            <div id="homeC4">
+                <!-- Another banner but with one image as background and another set of images for showcase. Wallpaper is background of h2 and set images; set images are below h2 sub-banner title. -->
+                <h2>OFFERING YOU THE BEST SOLUTION FOR YOUR COILOVERS</h2>
+                <img src="./photos/contentBG.jpg" alt="Image of coilovers.">
+            </div>
+            <div id="homeC5">
+                <!-- Another banner with image below h2 title. -->
+                <div>
+                    <h2>WE REPAIR/OVERHAUL/CUSTOMIZE ALL AFTER-MARKET COILOVER BRANDS</h2>
+                    <img src="./photos/contentBG.jpg" alt="Image of coilover brands.">
+                </div>
+            </div>
+        </section>
+        
+        <!-- General page footer style. -->
+        <section>
+            <div id="genFooter">
+                <!-- Below is bottom page footer accent -->
+                <div id="genFooterAccent">
+                    <a href="#homeTop" id="genFooterBackTop">Back to top</a>
+                </div>
+                <!-- Following below is bottom page/concluding page tabs/details. Horizontal layout by list (and not by items). -->
+                <div id="genFooterTable">
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">OVER 5 YEARS EXPERIENCE</h4>
+                        <p>We guarantee quality service in the repair, overhauling and customizing all after-market coilover brands.</p>
+                    </div>
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">OUR SERVICES</h4>
+                        <ul id="genFootertd2nd">
+                            <li>Basic Repair</li>
+                            <li>Complete Restoration and Restoration</li>
+                            <li>Customization</li>
+                            <li>Hydraulic Lifters</li>
+                            <li>Tuning</li>
+                        </ul>
+                    </div>
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">BUSINESS HOURS</h4>
+                        <p>Monday to Friday; 9AM to 5PM</p>
+                        <h4 class="genFooterHead">EMAIL US</h4>
+                        <p><a href="#" class="genFooterGenLink">coiloverspecialist@yahoo.com</a></p>
+                        <h4 class="genFooterHead">FACEBOOK PAGE</h4>
+                        <p><a href="#" class="genFooterGenLink">https://www.facebook.com/Coiloverhaul</a></p>
+                    </div>
+                </div>
+                <div id="genFooterPP">
+                    <a href="./privacyPolicy.html" class="genFooterGenLink">Privacy Policy</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Below is for customer support/admin contact floating button. Photo set as of 2021/06/16 is temporary. -->
+        <section>
+            <a class="genFooterHelp" href="#">
+                <!-- <img src="./photos/81802832_2556869651193212_82644477067227.webp" alt="Icon for help/customer support."> -->
+            </a>
+            <div class="label-container">
+                <div class="label-text">Customer Help</div>
+                <i class="fa fa-play label-arrow"></i>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

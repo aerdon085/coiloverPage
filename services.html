@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesContent/main.css">
+    <style>
+        #contentBG::after {
+            content: "";
+            background-image: url(./photos/contentBG.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        /* servicesC1 */
+        #servicesC1 {
+            max-width: 1370px;
+            margin: auto;
+            padding: 16px;
+            display: flex;
+            flex-flow: row wrap;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            justify-content: space-evenly;
+            background: rgb(238, 240, 228);
+        }
+        #servicesC1 div {
+            width: 400px;
+            padding: 32px 0;
+            text-align: center;
+        }
+        #servicesC1 div img {
+            height: calc(64px * 2);
+            width: calc(64px * 2);
+            margin-bottom: 8px;
+            object-fit: cover;
+            /* object-position: center; */
+        }
+        #servicesC1 div h4 {
+            margin-bottom: 8px;
+        }
+        #servicesC1 div li {
+            list-style-type: none;
+        }
+
+        /* servicesC2 */
+        #servicesC2 {
+            max-width: 1370px;
+            margin: auto;
+            text-align: center;
+        }
+        #servicesC2 p {
+            padding: 8px 0;
+            margin-top: 24px;
+        }
+        #servicesC2 a {
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 64px;
+            margin-bottom: 32px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            background: rgb(255, 179, 45);
+        }
+        #servicesC2 a:hover {
+            color: rgb(47, 46, 46);
+            background: rgb(21, 137, 46);
+        }
+    </style>
+    <title>Coilover Specialist - HOME</title>
+</head>
+
+<body>
+    <div id="contentBG">
+        <!-- General page tab style. -->
+        <section id="genTabStyle">
+            <div id="genTabStyleSub">
+                <!-- Main page tabs are to be h3. Layout is horizontal, with the website photo on their left. -->
+                <img src="./photos/81802832_2556869651193212_82644477067227.webp" alt="Logo image of Coilover Specialist." id="homeTop">
+                <div id="genTabGroup">
+                    <h3 class="genTabh3">
+                        <a href="./home.html" class="genTab">HOME</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="./services.html" class="genTab">SERVICES</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="#" class="genTab">FAQs</a>
+                    </h3>
+                    <h3 class="genTabh3">
+                        <a href="https://www.facebook.com/Coiloverhaul/" target="_blank" class="genTab">FB PAGE</a>
+                    </h3>
+                </div>
+                <div id="genTabLogin">
+                    <p>LOG IN</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Content -->
+        <section id="genContentStyle">
+            <div id="servicesC1">
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="Service icon.">
+                    <h4>CLEANING/DEGREASING/DETAILING</h4>
+                    <ul>
+                        <li>Cleaning of Damper</li>
+                        <li>Degreasing</li>
+                        <li>Detailing</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>DISASSEMBLY</h4>
+                    <ul><li>Disassembly of Strut</li></ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>BASIC REPAIR</h4>
+                    <ul>
+                        <li>Basic Repair</li>
+                        <li>Overhauling</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>COMPLETE RESTORATION AND OVERHAULING</h4>
+                    <ul>
+                        <li>Complete Overhauling</li>
+                        <li>Replacement of Parts (Internal/External)</li>
+                        <li>Powder Coated Painting</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>CUSTOMIZATION</h4>
+                    <ul>
+                        <li>Revalving</li>
+                        <li>Conversion (Disposable to rebuildable)</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>HYDRAULIC LIFTERS</h4>
+                    <ul>
+                        <li>Customization of Hydraulic Lifters</li>
+                        <li>Installation</li>
+                        <li>Calibration</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="./photos/contentBG.jpg" alt="">
+                    <h4>TUNING</h4>
+                    <ul>
+                        <li>Installation</li>
+                        <li>Adjustment of Spring Preload</li>
+                        <li>Height Adjustment</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="servicesC2">
+                <p>Interested?</p>
+                <a href="#">Avail now!</a>
+            </div>
+        </section>
+    
+        <!-- General page footer style. -->
+        <section>
+            <div id="genFooter">
+                <!-- Below is bottom page footer accent -->
+                <div id="genFooterAccent">
+                    <a href="#homeTop" id="genFooterBackTop">Back to top</a>
+                </div>
+                <!-- Following below is bottom page/concluding page tabs/details. Horizontal layout by list (and not by items). -->
+                <div id="genFooterTable">
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">OVER 5 YEARS EXPERIENCE</h4>
+                        <p>We guarantee quality service in the repair, overhauling and customizing all after-market coilover brands.</p>
+                    </div>
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">OUR SERVICES</h4>
+                        <ul id="genFootertd2nd">
+                            <li>Basic Repair</li>
+                            <li>Complete Restoration and Restoration</li>
+                            <li>Customization</li>
+                            <li>Hydraulic Lifters</li>
+                            <li>Tuning</li>
+                        </ul>
+                    </div>
+                    <div class="genFootertd">
+                        <h4 class="genFooterHead">BUSINESS HOURS</h4>
+                        <p>Monday to Friday; 9AM to 5PM</p>
+                        <h4 class="genFooterHead">EMAIL US</h4>
+                        <p><a href="#" class="genFooterGenLink">coiloverspecialist@yahoo.com</a></p>
+                        <h4 class="genFooterHead">FACEBOOK PAGE</h4>
+                        <p><a href="#" class="genFooterGenLink">https://www.facebook.com/Coiloverhaul</a></p>
+                    </div>
+                </div>
+                <div id="genFooterPP">
+                    <a href="./privacyPolicy.html" class="genFooterGenLink">Privacy Policy</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Below is for customer support/admin contact floating button. Photo set as of 2021/06/16 is temporary. -->
+        <section>
+            <a class="genFooterHelp" href="#">
+                <!-- <img src="./photos/81802832_2556869651193212_82644477067227.webp" alt="Icon for help/customer support."> -->
+            </a>
+            <div class="label-container">
+                <div class="label-text">Customer Help</div>
+                <i class="fa fa-play label-arrow"></i>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
