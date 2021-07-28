@@ -16,6 +16,12 @@ body {
   background: rgb(21, 137, 46);
   /* height: 120px; */
   width: 100%;
+  position: sticky;
+  top: 0;
+  /* left: 0; */
+  /* right: 0; */
+  bottom: 0;
+  z-index: 2;
 }
 #genTabStyleSub {
   /* height: auto; */
@@ -68,7 +74,7 @@ body {
   height: 52px;
   max-width: 1370px;
   margin: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #genFooterBackTop {
   height: 52px;
