@@ -14,42 +14,61 @@ body {
 /* General page tab style. */
 #genTabStyle {
   background: rgb(21, 137, 46);
-  /* height: 120px; */
+  height: 119px;
   width: 100%;
+  /* overflow: hidden; */
 }
 #genTabStyleSub {
   /* height: auto; */
   max-width: 1370px;
   margin: auto;
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
 }
 #homeTop {
   margin: 8px;
+  float: left;
+  border-radius: 50%;
 }
 #genTabGroup {
+  height: 103px;
+  margin: 8px;
   padding: 0;
   /* overflow: hidden; */
   /* display: inline-block; */
-}
-.genTabh3 {
   float: left;
-  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
-.genTabh3 .genTab {
-  display: block;
+.genTab {
+  /* height: 103px; */
+  /* margin: 8px 0; */
+  /* display: flex; */
   color: black;
   text-align: center;
+  /* align-items: center; */
   padding: 16px;
   text-decoration: none;
 }
-.genTabh3 .genTab:hover {
+.genTab:hover {
   color: white;
   border-radius: 2px;
   transition: 0.25s;
 }
 #genTabLogin {
+  height: 103px;
+  padding: 0 16px;
+  margin: 8px 0;
   float: right;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+#genTabLogin:hover {
+  color: white;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
 /* General content style */
@@ -68,7 +87,7 @@ body {
   height: 52px;
   max-width: 1370px;
   margin: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 #genFooterBackTop {
   height: 52px;
@@ -173,6 +192,8 @@ a.genFooterHelp:hover {
   background-size: cover;
   background-position: center;
 }
+
+/* @media screen and (min-width: 1012.8px) {} */
 
 /* Notes
 Last Rule, Specificity, Universal Selector
