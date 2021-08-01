@@ -145,10 +145,10 @@
             justify-content: space-evenly;
         }
         #homeC3CC1 h2 {
-            margin-top: 32px;
+            margin-top: 64px;
         }
         #homeC3CC1 h4 {
-            margin-bottom: 32px;
+            margin-bottom: 64px;
         }
         #homeC3CC2 a {
             height: 40px;
@@ -218,6 +218,76 @@
             object-fit: cover;
             outline: black solid 4px;
         }
+
+        /* Mobile */
+        @media screen and (max-width: 414px) {
+            /* homeC2 */
+            .homeContentHelpContainer {
+                min-width: 320px;
+            }
+            #homeContentHelp {
+                flex-direction: column;
+                align-items: center;
+            }
+            #homeContentHelpOtherContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* homeC3 */
+            #homeC3 {
+            padding: calc(64px - 16px) 0;
+            }
+            #homeC3Container {
+                min-width: 320px;
+                flex-direction: column;
+                align-items: center;
+            }
+            #homeC3CC1,
+            #homeC3CC2 {
+                width: calc(320px - 32px);
+            }
+            #homeC3CC1 h2 {
+                margin-top: 32px;
+            }
+            #homeC3CC1 h4 {
+                margin-bottom: 32px;
+            }
+
+            /* homeC4 */
+            #homeC4 {
+            height: 600px;
+            min-width: 320px;
+            padding: calc(64px - 16px) 0;
+            }
+            #homeC4 h2 {
+                margin: 0 16px;
+                text-align: center;
+            }
+            #homeC4 img {
+                height: 142.18px;
+                width: 252.765px;
+            }
+
+            /* homeC5 */
+            #homeC5 div {
+                height: 600px;
+                min-width: 320px;
+                padding: calc(64px - 16px) 0;
+            }
+            #homeC5 div h2 {
+            text-align: center;
+            margin: 0 16px;
+            }
+            #homeC5 div img {
+                height: 94.79;
+                width: 315.96px;
+                outline: black solid 2px;
+            }
+        }
+
+        /* Tablet */
+        /* @media screen and (max-width: 1012.8px) {} */
     </style>
     <title>Coilover Specialist - HOME</title>
 </head>
@@ -323,7 +393,7 @@
             <div id="homeC5">
                 <!-- Another banner with image below h2 title. -->
                 <div>
-                    <h2>WE REPAIR/OVERHAUL/CUSTOMIZE ALL AFTER-MARKET COILOVER BRANDS</h2>
+                    <h2>WE REPAIR, OVERHAUL, AND CUSTOMIZE ALL AFTER-MARKET COILOVER BRANDS</h2>
                     <img src="./photos/contentBG.jpg" alt="Image of coilover brands.">
                 </div>
             </div>

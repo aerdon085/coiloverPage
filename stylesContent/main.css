@@ -193,7 +193,67 @@ a.genFooterHelp:hover {
   background-position: center;
 }
 
-/* @media screen and (min-width: 1012.8px) {} */
+/* Mobile */
+@media screen and (max-width: 414px) {
+  /* General page tab style. */
+  #genTabStyle {
+    height: auto;
+    min-width: 320px;
+  }
+  #genTabStyleSub {
+    /* visibility: hidden; */
+    background: rgb(21, 137, 46);
+    height: auto;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #homeTop {
+    float: none;
+    border-radius: 50%;
+  }
+  #genTabGroup {
+    height: auto;
+    width: 120px;
+    flex-direction: column;
+    float: none;
+  }
+  .genTab {
+    padding: 8px 0;
+  }
+  #genTabLogin {
+    height: 0;
+    padding: 16px;
+    margin: 8px;
+    float: none;
+    display: flex;
+    align-items: center;
+  }
+
+  /* General page footer style. */
+  #genFooterAccent {
+    min-width: 320px;
+  }
+  #genFooterTable {
+    height: calc(170px * 3);
+    min-width: 320px;
+    padding: 4px 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .genFootertd {
+    border: 4px solid rgba(0, 0, 0, 0);
+    width: 300px;
+    margin: 0 4px;
+    text-indent: 0;
+    text-align: center;
+  }
+}
+
+/* Tablet */
+/* @media screen and (max-width: 1012.8px) {} */
 
 /* Notes
 Last Rule, Specificity, Universal Selector
