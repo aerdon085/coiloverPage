@@ -193,8 +193,35 @@ a.genFooterHelp:hover {
   background-position: center;
 }
 
-/* Mobile */
-@media screen and (max-width: 414px) {
+/* Default device size, as originally styled above or before media query section: PC */
+
+/* Larger tablet, small PC screen */
+/* Width: 750px -> 1008px */
+@media screen and (max-width: 1020px) {
+  /* General page footer style. */
+  #genFooterAccent {
+    min-width: 320px;
+  }
+  #genFooterTable {
+    height: calc(170px * 3);
+    min-width: 320px;
+    padding: 4px 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .genFootertd {
+    border: 4px solid rgba(0, 0, 0, 0);
+    width: 730px;
+    margin: 0 4px;
+    text-indent: 0;
+    text-align: center;
+  }
+}
+
+/* Tablet */
+/* Width: 414px -> 750px */
+@media screen and (max-width: 750px) {
   /* General page tab style. */
   #genTabStyle {
     height: auto;
@@ -232,28 +259,19 @@ a.genFooterHelp:hover {
   }
 
   /* General page footer style. */
-  #genFooterAccent {
-    min-width: 320px;
-  }
-  #genFooterTable {
-    height: calc(170px * 3);
-    min-width: 320px;
-    padding: 4px 0;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
   .genFootertd {
-    border: 4px solid rgba(0, 0, 0, 0);
-    width: 300px;
-    margin: 0 4px;
-    text-indent: 0;
-    text-align: center;
+    width: 410px;
   }
 }
 
-/* Tablet */
-/* @media screen and (max-width: 1012.8px) {} */
+/* Mobile */
+/* Width: 320px -> 414px */
+@media screen and (max-width: 430px) {
+  /* General page footer style. */
+  .genFootertd {
+    width: 300px;
+  }
+}
 
 /* Notes
 Last Rule, Specificity, Universal Selector

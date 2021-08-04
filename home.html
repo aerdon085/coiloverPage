@@ -86,7 +86,7 @@
         .homeC2TT #homeC2TTT3, 
         .homeC2TT #homeC2TTT4 {
             list-style: none;
-            visibility: hidden;
+            /* visibility: hidden; */
             width: 320px;
             background: rgb(47, 46, 46);
             color: white;
@@ -101,12 +101,20 @@
             position: absolute;
             z-index: 1;
         }
-        .homeC2TT:hover #homeC2TTT1,
-        .homeC2TT:hover #homeC2TTT2,
-        .homeC2TT:hover #homeC2TTT3, 
-        .homeC2TT:hover #homeC2TTT4 {
+        h4.homeC2TT ul#homeC2TTT1,
+        h4.homeC2TT ul#homeC2TTT2,
+        h4.homeC2TT ul#homeC2TTT3, 
+        h4.homeC2TT ul#homeC2TTT4 {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.25s ease;
+        }
+        h4.homeC2TT:hover ul#homeC2TTT1,
+        h4.homeC2TT:hover ul#homeC2TTT2,
+        h4.homeC2TT:hover ul#homeC2TTT3, 
+        h4.homeC2TT:hover ul#homeC2TTT4 {
             visibility: visible;
-            /* transition: 0.25s; */
+            opacity: 1;
         }
         #homeContentHelpOtherContainer {
             display: flex;
@@ -219,8 +227,27 @@
             outline: black solid 4px;
         }
 
+        /* Default device size, as originally styled above or before media query section: PC */
+
+        /* Larger tablet, small PC screen */
+        /* Width: 750px -> 1008px */
+        /* @media screen and (max-width: 1020px) {} */
+
+        /* Tablet */
+        /* Width: 414px -> 750px */
+        /* @media screen and (max-width: 750px) {} */
+
         /* Mobile */
-        @media screen and (max-width: 414px) {
+        /* Width: 320px -> 414px */
+        @media screen and (max-width: 430px) {
+            /* homeC1 */
+            #homeC1 h1 {
+                margin: 0 16px 8px 16px;
+            }
+            #homeC1 h4 {
+                margin: 8px 16px 0 16px;
+            }
+
             /* homeC2 */
             .homeContentHelpContainer {
                 min-width: 320px;
@@ -228,6 +255,14 @@
             #homeContentHelp {
                 flex-direction: column;
                 align-items: center;
+            }
+            .homeC2TT #homeC2TTT1,
+            .homeC2TT #homeC2TTT2,
+            .homeC2TT #homeC2TTT3, 
+            .homeC2TT #homeC2TTT4 {
+                width: 300px;
+                margin-left: -150px;
+                /* Use half of the width (240/2 = 120), to center the tooltip */
             }
             #homeContentHelpOtherContainer {
                 flex-direction: column;
@@ -256,7 +291,7 @@
 
             /* homeC4 */
             #homeC4 {
-            height: 600px;
+            height: 450px;
             min-width: 320px;
             padding: calc(64px - 16px) 0;
             }
@@ -285,9 +320,6 @@
                 outline: black solid 2px;
             }
         }
-
-        /* Tablet */
-        /* @media screen and (max-width: 1012.8px) {} */
     </style>
     <title>Coilover Specialist - HOME</title>
 </head>
