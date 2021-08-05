@@ -198,6 +198,8 @@ a.genFooterHelp:hover {
 /* Larger tablet, small PC screen */
 /* Width: 750px -> 1008px */
 @media screen and (max-width: 1020px) {
+  /* General page tab style. */
+
   /* General page footer style. */
   #genFooterAccent {
     min-width: 320px;
@@ -267,6 +269,8 @@ a.genFooterHelp:hover {
 /* Mobile */
 /* Width: 320px -> 414px */
 @media screen and (max-width: 430px) {
+  /* General page tab style. */
+
   /* General page footer style. */
   .genFootertd {
     width: 300px;
