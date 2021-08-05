@@ -184,6 +184,11 @@
         }
 
         /* homeC4 */
+        /* width = minimum size of current media query */
+        /* homeC4 banner size: h=w*0.79 */
+        /* homeC4 content image size:
+        image width = w*0.79
+        image height = image width*0.57 */
         #homeC4 {
             height: 800px;
             max-width: 1370px;
@@ -204,6 +209,11 @@
         }
 
         /* homeC5 */
+        /* width = minimum size of current media query */
+        /* homeC5 banner size: h=w*0.59 */
+        /* homeC5 content image size: 
+        image width = w-20px
+        image height = image width*0.3 */
         #homeC5 {
             background: rgb(238, 240, 228);
         }
@@ -228,6 +238,7 @@
         }
 
         /* Default device size, as originally styled above or before media query section: PC */
+        /* 1020px -> +++ */
 
         /* Larger tablet, small PC screen */
         /* Width: 750px -> 1008px */
@@ -239,8 +250,14 @@
             /* homeC3 */
             
             /* homeC4 */
+            /* width = minimum size of current media query */
+            /* homeC4 banner size: h=w*0.79 */
+            /* homeC4 content image size:
+            image width = w*0.79
+            image height = image width*0.57 */
+            /* Height multiplier: 1.3 */
             #homeC4 {
-                height: 450px;
+                height: calc((750px * 0.79) * 1.3);
                 min-width: 320px;
                 padding: calc(64px - 16px) 0;
             }
@@ -249,13 +266,19 @@
                 text-align: center;
             }
             #homeC4 img {
-                height: 142.18px;
-                width: 252.765px;
+                height: calc(((750px * 0.79) * 0.57) * 1.3);
+                width: (750px * 0.79);
             }
 
             /* homeC5 */
+            /* width = minimum size of current media query */
+            /* homeC5 banner size: h=w*0.59 */
+            /* homeC5 content image size: 
+            image width = w-20px
+            image height = image width*0.3 */
+            /* Height multiplier: 1.3 */
             #homeC5 div {
-                height: 1406px;
+                height: calc((750px * 0.59) * 1.3);
                 min-width: 320px;
                 padding: calc(64px - 16px) 0;
             }
@@ -264,8 +287,8 @@
                 margin: 0 16px;
             }
             #homeC5 div img {
-                height: 224px;
-                width: 740px;
+                height: calc((730px * 0.3) * 1.3);
+                width: 730px;
                 outline: black solid 4px;
             }
         }
@@ -323,21 +346,33 @@
             }
 
             /* homeC4 */
+            /* width = minimum size of current media query */
+            /* homeC4 banner size: h=w*0.79 */
+            /* homeC4 content image size:
+            image width = w*0.79
+            image height = image width*0.57 */
+            /* Height multiplier: 2 */
             #homeC4 {
-                height: 450px;
+                height: calc((430px * 0.79) * 2);
             }
             #homeC4 img {
-                height: 142.18px;
-                width: 252.765px;
+                height: calc(((430px * 0.79) * 0.57) * 2);
+                width: calc(430px * 0.79);
             }
 
             /* homeC5 */
+            /* width = minimum size of current media query */
+            /* homeC5 banner size: h=w*0.59 */
+            /* homeC5 content image size: 
+            image width = w-20px
+            image height = image width*0.3 */
+            /* Height multiplier: 2 */
             #homeC5 div {
-                height: 806px;
+                height: calc((430px * 0.59) * 2);
             }
             #homeC5 div img {
-                height: 129px;
-                width: 425px;
+                height: calc((410px * 0.3) * 2);
+                width: 410px;
                 outline: black solid 2px;
             }
         }
@@ -348,25 +383,6 @@
             /* homeC1 */
 
             /* homeC2 */
-            .homeContentHelpContainer {
-                min-width: 320px;
-            }
-            #homeContentHelp {
-                flex-direction: column;
-                align-items: center;
-            }
-            .homeC2TT #homeC2TTT1,
-            .homeC2TT #homeC2TTT2,
-            .homeC2TT #homeC2TTT3, 
-            .homeC2TT #homeC2TTT4 {
-                width: 300px;
-                margin-left: -150px;
-                /* Use half of the width (240/2 = 120), to center the tooltip */
-            }
-            #homeContentHelpOtherContainer {
-                flex-direction: column;
-                align-items: center;
-            }
 
             /* homeC3 */
             #homeC3CC1,
@@ -375,21 +391,33 @@
             }
 
             /* homeC4 */
+            /* width = minimum size of current media query */
+            /* homeC4 banner size: h=w*0.79 */
+            /* homeC4 content image size:
+            image width = w*0.79
+            image height = image width*0.57 */
+            /* Height multiplier: 3 */
             #homeC4 {
-                height: 450px;
+                height: calc((320px * 0.79) * 3);
             }
             #homeC4 img {
-                height: 142.18px;
-                width: 252.765px;
+                height: calc(((320px * 0.79) * 0.57) * 3);
+                width: calc(320px * 0.79);
             }
 
             /* homeC5 */
+            /* width = minimum size of current media query */
+            /* homeC5 banner size: h=w*0.59 */
+            /* homeC5 content image size: 
+            image width = w-20px
+            image height = image width*0.3 */
+            /* Height multiplier: 3 */
             #homeC5 div {
-                height: 600px;
+                height: calc((320px * 0.59) * 3);
             }
             #homeC5 div img {
-                height: calc(315px * 0.3);
-                width: 315px;
+                height: calc((300px * 0.3) * 3);
+                width: 300px;
             }
         }
     </style>
