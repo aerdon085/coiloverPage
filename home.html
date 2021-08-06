@@ -206,6 +206,7 @@
             height: 450px;
             width: 800px;
             object-fit: cover;
+            outline: black solid 4px;
         }
 
         /* homeC5 */
@@ -246,6 +247,14 @@
             /* homeC1 */
 
             /* homeC2 */
+            #homeContentHelp {
+                flex-flow: row wrap;
+            }
+            #homeContentHelp h4 {
+                padding: 8px;
+                height: 36px;
+                width: 340px;
+            }
 
             /* homeC3 */
             
@@ -267,7 +276,7 @@
             }
             #homeC4 img {
                 height: calc(((750px * 0.79) * 0.57) * 1.3);
-                width: (750px * 0.79);
+                width: calc(750px * 0.79);
             }
 
             /* homeC5 */
@@ -312,12 +321,17 @@
                 flex-direction: column;
                 align-items: center;
             }
+            #homeContentHelp h4 {
+                padding: 8px;
+                height: 36px;
+                width: 141px;
+            }
             .homeC2TT #homeC2TTT1,
             .homeC2TT #homeC2TTT2,
             .homeC2TT #homeC2TTT3, 
             .homeC2TT #homeC2TTT4 {
-                width: 300px;
-                margin-left: -150px;
+                width: 410px;
+                margin-left: -205px;
                 /* Use half of the width (240/2 = 120), to center the tooltip */
             }
             #homeContentHelpOtherContainer {
@@ -373,7 +387,6 @@
             #homeC5 div img {
                 height: calc((410px * 0.3) * 2);
                 width: 410px;
-                outline: black solid 2px;
             }
         }
 
@@ -383,6 +396,14 @@
             /* homeC1 */
 
             /* homeC2 */
+            .homeC2TT #homeC2TTT1,
+            .homeC2TT #homeC2TTT2,
+            .homeC2TT #homeC2TTT3, 
+            .homeC2TT #homeC2TTT4 {
+                width: 300px;
+                margin-left: -150px;
+                /* Use half of the width (240/2 = 120), to center the tooltip */
+            }
 
             /* homeC3 */
             #homeC3CC1,

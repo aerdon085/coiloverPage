@@ -220,6 +220,8 @@ a.genFooterHelp:hover {
     text-indent: 0;
     text-align: center;
   }
+
+  /* General Footer Customer Support */
 }
 
 /* Tablet */
@@ -245,12 +247,15 @@ a.genFooterHelp:hover {
   }
   #genTabGroup {
     height: auto;
-    width: 120px;
-    flex-direction: column;
+    min-width: 410px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     float: none;
   }
   .genTab {
-    padding: 8px 0;
+    width: 255px;
+    padding: 8px;
   }
   #genTabLogin {
     height: 0;
@@ -265,16 +270,35 @@ a.genFooterHelp:hover {
   .genFootertd {
     width: 410px;
   }
+
+  /* General Footer Customer Support */
 }
 
 /* Mobile */
 /* Width: 320px -> 414px */
 @media screen and (max-width: 430px) {
   /* General page tab style. */
+  #genTabGroup {
+    height: auto;
+    min-width: 120px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .genTab {
+    width: auto;
+    padding: 8px 0;
+  }
 
   /* General page footer style. */
   .genFootertd {
     width: 300px;
+  }
+
+  /* General Footer Customer Support */
+  .genFooterHelp {
+    bottom: 20px;
+    right: 20px;
   }
 }
 
