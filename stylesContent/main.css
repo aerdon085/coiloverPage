@@ -380,7 +380,7 @@ Animation
   animation-name: ; animation-duration: ; animation-iteration-count: 2;
   <style>
     .animation {
-      background:black;
+      background: black;
       animation: move 5s infinite;
     }
     @keyframes move {
@@ -398,5 +398,45 @@ Animation
       }
     }
   </style>
-  animation-fill-mode: ;
+  animation-fill-mode: forwards|backwards|both;
+  animation-direction: normal|reverse|alternate|alternate-reverse;
+CSS Variables (a.k.a. custom properties)
+  --varName: value;
+  property: var(--varName);
+  scope (:root{} === global, element === local)
+  Can be used with any property.
+    <head>
+      <style>
+        :root {
+        --blue: #1e90ff;
+        --weirdNameForColor: #f15025;
+        --mainTransition: all 0.25s ease;
+        }
+        h2 {
+          color: var(--blue);
+          transition: var(mainTransition);
+        }
+        h2:hover {
+          color: var(--weirdNameForColor);
+        }
+        div {
+          --white: #ffffff;
+          border: 2px solid var(--blue);
+        }
+        span {
+          background-color: var(--white);
+        }
+      </style>
+    </head>
+    <body>
+      <h2></h2>
+      <div>
+        <span></span>
+      </div>
+    </body>
+FontAwesome Icons
+text-shadow, box-shadow
+Browser Prefixes
+Semantic HTML
+Emmet Snippets
 */
