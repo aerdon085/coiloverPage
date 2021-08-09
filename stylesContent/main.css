@@ -302,8 +302,13 @@ a.genFooterHelp:hover {
   }
 }
 
-/* Notes
+/* Notes on CSS
+Inline CSS, Internal CSS, External CSS
+id, class
+div, span
 Last Rule, Specificity, Universal Selector
+Colors
+  RGB, RGBA, HEX
 Pixels, Font-Size, Width, Height
 Percent Values
 Em-Rem Values
@@ -311,19 +316,26 @@ Em-Rem Values
 VH And VW
 Default Browser Syles
 Calc Function
+  height: calc(50px + 0.5);
+Fonts
+  font-family, font-weight, font-style
+  font: font-style font-variant font-weight font-size/line-height font-family;
+Text Properties
+  text-align, text-indent, line-height, letter-spacing, word-spacing, text-transform, text-decoration
+Padding, Margin, Border, Border-Radius, Outline
 <style>border: 20px solid black;</style>
+box-sizing: border-box;
+display: flex|inline-block|block|inline;
+display: none;, opacity, visibility
 Background-Image-Property
-Background-Repeat
-Background-Size
-Background-Position
-Background-Attachment
+  Background-Repeat, Background-Size, Background-Position, Background-Attachment
 Linear-Gradient
   <div style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(#) center/cover fixed no-repeat;">
     This is DIV
   </div>
 Float Property (and Clear)
 Position Property
-Media Quries
+Media Queries
     @media screen and ()
 Z-Index
 ::Before and ::After Pseudo Elements (Note: Does not work with with img)
@@ -435,7 +447,51 @@ CSS Variables (a.k.a. custom properties)
       </div>
     </body>
 text-shadow, box-shadow
+  text-shadow: x-axis y-axis blur spread color;
+  box-shadow: x-axis y-axis blur spread color;
+  <style>
+    text-shadow: 5px 5px 3px black;
+  </style>
 Browser Prefixes
-Semantic HTML
+  <style>
+    .example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+      -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+    }
+  </style>
+Semantic HTML (Semantic Tags)
+  Note: A semantic element clearly describes its meaning to both the browser and the developer. Examples of non-semantic elements: <div> and <span>; tells nothing about its content. Examples of semantic elements: <aside>, <details>, <figcaption>, <figure>, <footer>, <header>, <main>, <mark>, <nav>, <section>, <summary>, <time>, <form>, <table>, and <article>; clearly defines its content.
 Emmet Snippets
+  h1.banner ===
+    <h1 class="banner"></h1>
+  p#special ===
+    <p id="special"></p>
+  #section.homeC1.homeC2 ===
+    <div id="section" class="homeC1 homeC2"></div>
+  div>ul>li*3 ===
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  p{some text} ===
+    <p>some text</p>
+  ul>li*3{$} ===
+    <ul>
+      <li>1<li>
+      <li>2<li>
+      <li>3<li>
+    </ul>
 */
